@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4ee16d8c51.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="img/png" href="https://tse1.mm.bing.net/th?id=OIP._KSXGhEnC-JF3nbN6PSbBgHaHa&pid=Api&P=0&h=180">
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    <div class="card-wrapper">
+        <h2 class="heading">Weather App</h2>
+        <div class="card">
+            <div class="search">
+                <input type="text" placeholder="Enter City Name" spellcheck="false" title="Input the City Name">
+                <!-- <button><i class="fa-solid fa-magnifying-glass"></i></button> -->
+                <img class="search-img"
+                    src="https://tse1.mm.bing.net/th?id=OIP.HRsbqD30Ya3p94QFies9AgHaHa&pid=Api&P=0&h=180">
+            </div>
+            <div class="weather">
+                <i class="fa-solid fa-cloud-moon-rain rainy"></i>
+                <i class="fa-solid fa-sun sunny" style="display: none;"></i>
+                <i class="fa-solid fa-cloud cloudy" style="display: none;"></i>
+                <i class="fa-solid fa-smog misty" style="display: none;"></i>
+
+
+                <h1 class="temp">-- °C</h1>
+                <h2 class="city"> -- --</h2>
+                <div class="details">
+                    <div class="col">
+                        <i class="fa-solid fa-droplet icons"></i>
+                        <div>
+                            <p class="humidity">-- %</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <i class="fa-solid fa-wind icons"></i>
+                        <div>
+                            <p>Wind Speed</p>
+                            <p class="wind">-- km/h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JS File -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
