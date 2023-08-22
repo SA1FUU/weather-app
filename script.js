@@ -67,6 +67,13 @@ async function checkWeather(city) {
         cloudyIcon.style.display = "none"
         sunnyIcon.style.display = "none"
     }
+          else if (data.weather[0].main === "Drizzle") {
+        thunderIcon.style.display = "none"
+        rainyIcon.style.display = "block"
+        mistyIcon.style.display = 'none'
+        cloudyIcon.style.display = "none"
+        sunnyIcon.style.display = "none"
+    }
     else {
         rainyIcon.style.display = "none"
         mistyIcon.style.display = 'none'
