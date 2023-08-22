@@ -19,28 +19,34 @@
 <body>
 
     <div class="card-wrapper">
-        <h2 class="heading">Weather App</h2>
         <div class="card">
+            <h2 class="heading">Weather App</h2>
             <div class="search">
-                <input type="text" placeholder="Enter City Name" spellcheck="false" title="Input the City Name">
-                <!-- <button><i class="fa-solid fa-magnifying-glass"></i></button> -->
+                <input type="text" placeholder="Enter City Name" spellcheck="false" autofocus title="Input the City Name">
+                <i class="fa-solid fa-rotate-right reload"></i>
+                <!-- <i class="fa-solid fa-xmark reload"></i> -->
                 <img class="search-img"
                     src="https://tse1.mm.bing.net/th?id=OIP.HRsbqD30Ya3p94QFies9AgHaHa&pid=Api&P=0&h=180">
             </div>
             <div class="weather">
-                <i class="fa-solid fa-cloud-moon-rain rainy"></i>
+                <!-- <i class="fa-solid fa-cloud-moon-rain rainy"></i> -->
+                <i class="fa-solid fa-cloud-rain rainy" style="display: none;"></i>
                 <i class="fa-solid fa-sun sunny" style="display: none;"></i>
                 <i class="fa-solid fa-cloud cloudy" style="display: none;"></i>
                 <i class="fa-solid fa-smog misty" style="display: none;"></i>
+                <i class="fa-solid fa-cloud-bolt thunder" style="display: none;"></i>
 
 
-                <h1 class="temp">-- °C</h1>
+                <h1 class="temp">-- </h1>
                 <h2 class="city"> -- --</h2>
+                <h4 class="feels-like"></h4>
+                <h4 class="mausam">-- --</h4>
+
                 <div class="details">
                     <div class="col">
                         <i class="fa-solid fa-droplet icons"></i>
                         <div>
-                            <p class="humidity">-- %</p>
+                            <p class="humidity">-- </p>
                             <p>Humidity</p>
                         </div>
                     </div>
@@ -51,10 +57,20 @@
                             <p class="wind">-- km/h</p>
                         </div>
                     </div>
+                    
                 </div>
+                 <!-- <hr> -->
+                 
+                </div>
+                <section>
+                    <div class="footer-card">
+                        <h5>&copy - SA1FUU</h5>
+                        <a href="https://github.com/SA1FUU/weather-app/" target="_blank"><h5>Source Code</h5></a>
+                    </div>
+                </section>
             </div>
-        </div>
     </div>
+
 
 
     <!-- JS File -->
