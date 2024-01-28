@@ -133,9 +133,7 @@ body {
         justify-content: center;
     }
     .card{
-        margin-top: -5rem;
-        /* position: absolute; */
-        /* top: 5rem; */
+        margin-top: -2rem;
     }
     form input{
         height: 2.2rem;
