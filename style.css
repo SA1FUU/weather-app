@@ -127,13 +127,9 @@ body {
 }
 
 @media (max-width: 450px) {
-    .card-wrapper{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
     .card{
-        margin-top: -3.5rem;
+       position: absolute;
+       top: 4rem;
     }
     form input{
         height: 2.2rem;
