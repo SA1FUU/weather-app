@@ -7,6 +7,8 @@ const form = document.querySelector("form")
 
 const loader = document.querySelector(".load-cont")
 
+const searchIcon = document.getElementById("search-icon")
+
 const error = document.getElementById('error')
 
 const showLoader = () => {
@@ -46,4 +48,15 @@ form.addEventListener("submit", (e) => {
 
 window.addEventListener("load", () => {
     checkWeather('delhi')
+})
+
+searchIcon.addEventListener("click", (e) => {
+    e.preventDefault()
+    if (searchInput.value == "") {
+        error.textContent = "*Enter City Name"
+    }
+    else {
+        checkWeather(searchInput.value)
+        error.textContent = ""
+    }
 })
