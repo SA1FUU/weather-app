@@ -129,7 +129,7 @@ body {
 @media (max-width: 450px) {
     .card{
        position: absolute;
-       top: 3rem;
+       top: 3.5rem;
     }
     form input{
         height: 2.2rem;
