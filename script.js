@@ -2,7 +2,7 @@ const apiKey = "9252c4e3a127b1c704f9f2422a5a0063"
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 
 
-const searchInput = document.querySelector("input")
+let searchInput = document.querySelector("input")
 const form = document.querySelector("form")
 
 const loader = document.querySelector(".load-cont")
@@ -35,28 +35,40 @@ async function checkWeather(city) {
     hideLoader()
 }
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault()
+function saveCityName() {
+    localStorage.setItem("CityName", searchInput.value)
+}
+
+function showCityName() {
+    searchInput.value = localStorage.getItem("CityName")
+}
+showCityName()
+
+
+function GetWeather() {
     if (searchInput.value == "") {
-        error.textContent = "*Enter City Name"
+        error.textContent = "*Enter City / Country Name"
     }
     else {
         checkWeather(searchInput.value)
+        saveCityName()
         error.textContent = ""
     }
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    GetWeather()
 })
 
-window.addEventListener("load", () => {
-    checkWeather('delhi')
-})
+// or
 
 searchIcon.addEventListener("click", (e) => {
     e.preventDefault()
-    if (searchInput.value == "") {
-        error.textContent = "*Enter City Name"
-    }
-    else {
-        checkWeather(searchInput.value)
-        error.textContent = ""
-    }
+    GetWeather()
+})
+
+
+window.addEventListener("load", () => {
+    checkWeather(searchInput.value)
 })
